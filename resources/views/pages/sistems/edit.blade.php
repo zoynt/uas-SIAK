@@ -12,7 +12,7 @@
             <div class="section-header">
                 <h1>Edit User</h1>
                 <div class="section-header-breadcrumb">
-                    <div class="breadcrumb-item active"><a href="#">Dashboard</a></div>
+                    <div class="breadcrumb-item active"><a href="{{ url('home') }}">Dashboard</a></div>
                     <div class="breadcrumb-item"><a href="#">Users</a></div>
                     <div class="breadcrumb-item">Edit Data</div>
                 </div>
@@ -108,7 +108,7 @@
                                     class="form-control "
                                     name="alamat" value="{{ $sistem->alamat }}">
                             </div>
-
+                        
                             <div class="form-group">
                                 <label>rt</label>
                                 <input type="text"
@@ -144,11 +144,10 @@
                                     name="tgl_lhr" value="{{ $sistem->tgl_lhr }}">
                             </div>
 
-                            <div class="form-group">
-                                <label>foto</label>
-                                <input type="text"
-                                    class="form-control "
-                                    name="foto" value="{{ $sistem->foto }}">
+
+                            <div class="mb-3">
+                                <label for="foto" class="form-label">Foto</label>
+                                <input class="form-control" type="file" id="foto" name="foto">
                             </div>
 
                             <div class="form-group">

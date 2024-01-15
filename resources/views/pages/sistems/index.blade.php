@@ -11,10 +11,10 @@
     <div class="main-content">
         <section class="section">
             <div class="section-header">
-                <h1>All Data</h1>
-
+                <h1>Sistem Informasi Administrasi Kependudukan</h1>
+`
                 <div class="section-header-breadcrumb">
-                    <div class="breadcrumb-item active"><a href="#">Dashboard</a></div>
+                    <div class="breadcrumb-item active"><a href="{{ url('home') }}">Dashboard</a></div>
                     <div class="breadcrumb-item"><a href="#">Data</a></div>
                     <div class="breadcrumb-item">All Data</div>
                 </div>
@@ -31,9 +31,9 @@
                     <div class="col-12">
                         <div class="card">
                             <div class="card-header">
-                                <h4>All Users</h4>
+                                <h4>All Data SIAK</h4>
                                 <div class="section-header-button">
-                                    <a href="{{ route('sistem.create') }}" class="btn btn-primary">New User</a>
+                                    <a href="{{ route('sistem.create') }}" class="btn btn-success">New Data</a>
                                 </div>
                             </div>
                             <div class="card-body">
@@ -41,7 +41,7 @@
                                 <div class="float-right">
                                     <form method="GET", action="{{ route('sistem.index') }}">
                                         <div class="input-group">
-                                            <input type="text" class="form-control" placeholder="Search" name="name">
+                                            <input type="text" class="form-control" placeholder="Search" name="nama">
                                             <div class="input-group-append">
                                                 <button class="btn btn-primary"><i class="fas fa-search"></i></button>
                                             </div>
@@ -59,7 +59,7 @@
                                             <th>nama</th>
                                             <th>kelamin</th>
                                             <th>agama</th>
-                                            <th>gol_darah</th>
+                                            <th>golongan darah</th>
                                             <th>nama_ayah</th>
                                             <th>nama_ibu</th>
                                             <th>nama_dusun</th>
@@ -68,7 +68,7 @@
                                             <th>rw</th>
                                             <th>no_telepon</th>
                                             <th>tempat lahir</th>
-                                            <th>tagal lahir</th>
+                                            <th>tanggal lahir</th>
                                             <th>foto</th>
                                             <th>kelainan fisik</th>
                                             <th>kelainan mental</th>

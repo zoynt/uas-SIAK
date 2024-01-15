@@ -14,11 +14,12 @@ class SistemController extends Controller
     public function index(Request $request)
     {
         $sistems = DB::table('sistems')
-            // ->when($request->input('name'), function ($query, $name) {
-            //     return $query->where('name', 'like', '%' . $name . '%');
-            // })
-            ->select('id','no_ktp', 'nama' , 'kelamin' , 'agama' , 'gol_darah' , 'nama_ayah' , 'nama_ibu' , 'nama_dusun' , 'alamat', 'rt' , 'rw' , 
-            'no_telepon' , 'tempat_lhr' , 'tgl_lhr'  , 'foto'  , 'kl_fisik'  , 'kl_mental'  , 'pendidikan'   , 'pekerjaan'   , 'status_nikah'  , 'warga_negara' , 'status_hidup' , )    
+            ->when($request->input('nama'), function ($query, $nama) {
+                return $query->where('nama', 'like', '%' . $nama . '%');
+            })
+            ->select('id','no_ktp', 'nama' , 'kelamin' , 'agama' , 'gol_darah' , 'nama_ayah' , 'nama_ibu' , 'nama_dusun' , 
+            'alamat', 'rt' , 'rw' , 'no_telepon' , 'tempat_lhr' , 'tgl_lhr'  , 'foto'  , 'kl_fisik'  , 
+            'kl_mental'  , 'pendidikan'   , 'pekerjaan'   , 'status_nikah'  , 'warga_negara' , 'status_hidup' , )    
             ->orderBy('id', 'desc')
             ->paginate(15);
         return view('pages.sistems.index', compact('sistems'));
@@ -33,7 +34,6 @@ class SistemController extends Controller
      */
     public function store(StoreSistemRequest $request)
     {
-
         Sistem::create([
         'no_ktp'=> $request['no_ktp'],
         'nama' => $request['nama'],
@@ -77,6 +77,6 @@ class SistemController extends Controller
     public function destroy(Sistem $sistem)
     {
         $sistem->delete();
-        return redirect()->route('user.index')->with('success', ' Data Berhasil dihapus');
+        return redirect()->route('sistem.index')->with('success', ' Data Berhasil dihapus');
     }
 }

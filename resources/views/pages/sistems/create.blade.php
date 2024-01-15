@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'New User')
+@section('title', 'New Dara')
 
 @push('style')
     <!-- CSS Libraries -->
@@ -12,7 +12,7 @@
             <div class="section-header">
                 <h1>New User</h1>
                 <div class="section-header-breadcrumb">
-                    <div class="breadcrumb-item active"><a href="#">Dashboard</a></div>
+                    <div class="breadcrumb-item active"><a href="{{ url('home') }}">Dashboard</a></div>
                     <div class="breadcrumb-item"><a href="#">Users</a></div>
                     <div class="breadcrumb-item">New User</div>
                 </div>
@@ -115,7 +115,7 @@
                                     class="form-control"
                                     name="alamat" >
                             </div>
-
+                        
                             <div class="form-group">
                                 <label>RT</label>
                                 <input type="text"
@@ -157,11 +157,9 @@
                                     name="tgl_lhr" >
                             </div>
 
-                            <div class="form-group">
-                                <label>foto</label>
-                                <input type="text"
-                                    class="form-control"
-                                    name="foto" >
+                            <div class="mb-3">
+                                <label for="foto" class="form-label">Foto</label>
+                                <input class="form-control" type="file" id="foto" name="foto">
                             </div>
 
                             <div class="form-group">

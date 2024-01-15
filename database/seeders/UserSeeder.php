@@ -14,8 +14,6 @@ class UserSeeder extends Seeder
      */
     public function run(): void
     {
-        User::factory(20)->create();
-
         User::create([
             'name' => 'Zoya Nujula Ramadhoni',
             'email' => 'C050422022@mahasiswa.poliban.ac.id',
@@ -23,5 +21,7 @@ class UserSeeder extends Seeder
             'password' => Hash::make('1234'),
             'roles' => 'mahasiswa',
         ]);
+
+        User::factory(20)->create();
     }
 }

@@ -13,6 +13,6 @@ class SistemSeeder extends Seeder
      */
     public function run(): void
     {
-        Sistem::factory(40)->create();
+        Sistem::factory(30)->create();
     }
 }
