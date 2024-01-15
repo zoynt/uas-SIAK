@@ -22,11 +22,27 @@ class UpdateUserRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'name' => 'required|string|max:80',
-            'email' => 'required|email',
-            'handphone' => 'string',
-            'address' => 'string',
-            'roles' => 'string',
+            'nama' ,
+            'kelamin' ,
+            'agama' ,
+            'gol_darah' ,
+            'nama_ayah' ,
+            'nama_ibu' ,
+            'nama_dusun' ,
+            'alamat' ,
+            'rt' ,
+            'rw' ,
+            'no_telepon' => 'required|numeric',
+            'tempat_lhr' ,
+            'tgl_lhr'  ,
+            'foto'  ,
+            'kl_fisik'  ,
+            'kl_mental'  ,
+            'pendidikan'   ,
+            'pekerjaan'   ,
+            'status_nikah'  ,
+            'warga_negara' ,
+            'status_hidup' ,
         ];
     }
 }

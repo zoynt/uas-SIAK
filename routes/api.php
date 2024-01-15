@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Api\AuthController;
 use App\Http\Controllers\Api\ScheduleController;
+use App\Http\Controllers\Api\SistemController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 /*
@@ -23,4 +24,6 @@ Route::post('/logout', [AuthController::class, 'logout'])
     ->middleware('auth:sanctum');
 
 Route::apiResource('schedules', ScheduleController::class)
+    ->middleware('auth:sanctum');
+Route::apiResource('sistems', SistemController::class)
     ->middleware('auth:sanctum');

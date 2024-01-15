@@ -1,17 +1,18 @@
 <?php
 
 namespace Database\Seeders;
-use App\Models\Schedule;
+
+use App\Models\Sistem;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
-class ScheduleSeeder extends Seeder
+class SistemSeeder extends Seeder
 {
     /**
      * Run the database seeds.
      */
     public function run(): void
     {
-        Schedule::factory(25)->create();
+        Sistem::factory(40)->create();
     }
 }

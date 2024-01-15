@@ -26,6 +26,15 @@
 
                 </ul>
             </li>
+            
+            <li class="nav-item dropdown ">
+                <a href="#" class="nav-link has-dropdown"><i class="fas fa-user-check"></i><span>SIAK</span></a>
+                <ul class="dropdown-menu">
+                    <li>
+                        <a class="nav-link" href="{{ route('sistem.index') }}">SIAK List</a>
+                    </li>
+                </ul>
+            </li>
 
     </aside>
 </div>
