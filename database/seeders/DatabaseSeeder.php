@@ -17,6 +17,7 @@ class DatabaseSeeder extends Seeder
                 SubjectSeeder::class,
                 ScheduleSeeder::class,
                 SistemSeeder::class,
+                // PekerjaanSeeder::class,
             ]);
 
     }

@@ -32,10 +32,13 @@ return new class extends Migration
             $table->string('kl_mental');
             $table->string('pendidikan');
             $table->string('pekerjaan');
+            $table->bigInteger('pekerjaan_id')->unsigned()->nullable();
+            $table->foreign('pekerjaan_id')->references('id')->on('pekerjaans')->onDelete('set null');
             $table->enum('status_nikah',['nikah','belum nikah']);
             $table->enum('warga_negara',['WNI','WNA']);
             $table->enum('status_hidup',['hidup','mati']);
             $table->timestamps();
+            
         });
     }
 

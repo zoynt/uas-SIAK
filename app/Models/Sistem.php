@@ -35,6 +35,6 @@ class Sistem extends Model
 
     public function sistem()
     {
-        return $this->belongsTo(Sistem::class);
+        return $this->belongsTo(Pekerjaan::class);
     }
 }
