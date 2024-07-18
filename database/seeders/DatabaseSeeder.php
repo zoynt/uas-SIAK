@@ -16,8 +16,8 @@ class DatabaseSeeder extends Seeder
                 UserSeeder::class,
                 SubjectSeeder::class,
                 ScheduleSeeder::class,
+                PekerjaanSeeder::class,
                 SistemSeeder::class,
-                // PekerjaanSeeder::class,
             ]);
 
     }

@@ -31,9 +31,10 @@ class Sistem extends Model
         'status_nikah'  ,
         'warga_negara' ,
         'status_hidup' ,
+        'pekerjaan_id',
     ];
 
-    public function sistem()
+    public function pekerjaan()
     {
         return $this->belongsTo(Pekerjaan::class);
     }

@@ -14,10 +14,21 @@ class SistemController extends Controller
      */
     public function index(Request $request)
     {
-        $user = $request->user();
-        $sistem = Sistem::where('id', '=', $user->id)->get();
-        return SistemResource::collection($sistem->load('sistem'));
+        $sistem = Sistem::with('pekerjaan')->get();
+        return SistemResource::collection($sistem);  
     }
+    // $user = $request->user();
+    // $sistems = Sistem::where('id', '=', $user->id)->get();
+    // return SistemResource::collection($sistems->load('sistem'));
+
+    // $user = $request->user();
+    // $sistem = Sistem::where('id', '=', $user->id)->get();
+    // return SistemResource::collection($sistem->load('sistem'));
+
+
+    // $sistem = Sistem::with('pekerjaan')->where('id', '=', $user->id)->get();
+    // $asalSekolah = AsalSekolah::with('JurusanSekolah')->get();
+    // $sistem = Sistem::with('pekerjaan')->get();
 
     /**
      * Store a newly created resource in storage.
@@ -30,9 +41,10 @@ class SistemController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
+    public function show($id)
     {
-        //
+        $sistem = Sistem::find($id);
+        return response()->json($sistem);
     }
 
     /**

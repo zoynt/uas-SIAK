@@ -17,7 +17,7 @@ class PekerjaanFactory extends Factory
     public function definition(): array
     {
         return [
-            'gaji' => $this->faker->randomFloat(0, 100000, 10000000),
+            'pekerjaan' => (['PNS', 'Wiraswasta', 'Petani', 'Pedagang', 'Buruh','TNI']),
         ];
     }
 }

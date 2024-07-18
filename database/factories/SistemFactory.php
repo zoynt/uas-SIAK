@@ -35,10 +35,11 @@ class SistemFactory extends Factory
             'kl_fisik' => $this->faker->randomElement(['sehat', 'sakit']),
             'kl_mental' => $this->faker->randomElement(['sehat', 'sakit']),
             'pendidikan' => $this->faker->randomElement(['SD', 'SMP', 'SMA', 'D1', 'D2', 'D3', 'S1', 'S2', 'S3']),
-            'pekerjaan' => $this->faker->randomElement(['PNS', 'Wiraswasta', 'Petani', 'Pedagang', 'Buruh','TNI']),
             'status_nikah' => $this->faker->randomElement(['nikah', 'belum nikah']),
             'warga_negara' => $this->faker->randomElement(['WNI', 'WNA']),
             'status_hidup' => $this->faker->randomElement(['hidup', 'mati']),
+            'pekerjaan_id' => \App\Models\Pekerjaan::inRandomOrder()->first()->id,
+            
         ];
     }
 }

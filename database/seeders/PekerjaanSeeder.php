@@ -13,6 +13,11 @@ class PekerjaanSeeder extends Seeder
      */
     public function run(): void
     {
-        Pekerjaan::factory(30)->create();
+        Pekerjaan::create(['pekerjaan' => "PNS"]);
+        Pekerjaan::create(['pekerjaan' => "Wiraswasta"]);
+        Pekerjaan::create(['pekerjaan' => "Pedagang"]);
+        Pekerjaan::create(['pekerjaan' => "Petani"]);
+        Pekerjaan::create(['pekerjaan' => "Buruh"]);
+        Pekerjaan::create(['pekerjaan' => "TNI"]);
     }
 }

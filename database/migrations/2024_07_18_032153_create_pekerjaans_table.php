@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('pekerjaans', function (Blueprint $table) {
             $table->id();
-            $table->decimal('gaji', 10, 2)->nullable();
+            $table->string('pekerjaan');
             $table->timestamps();
         });
     }
